@@ -82,18 +82,16 @@
     import { inView, animate, stagger } from "motion";
 
     inView("#faq-section", () => {
-        // @ts-ignore
-        animate(
-            ".testimonial-card",
-            { opacity: [0, 1], x: [-50, 0] },
-            { delay: stagger(0.2), duration: 0.8, easing: "ease-out" },
-        );
+        animate(".testimonial-card", { opacity: [0, 1], x: [-50, 0] } as any, {
+            delay: stagger(0.2),
+            duration: 0.8,
+            ease: "easeOut",
+        });
 
-        // @ts-ignore
-        animate(
-            ".faq-item",
-            { opacity: [0, 1], y: [20, 0] },
-            { delay: stagger(0.1), duration: 0.6, easing: "ease-out" },
-        );
+        animate(".faq-item", { opacity: [0, 1], y: [20, 0] } as any, {
+            delay: stagger(0.1),
+            duration: 0.6,
+            ease: "easeOut",
+        });
     });
 </script>

@@ -41,11 +41,13 @@
                 id="hero-cta"
                 class="opacity-0 flex flex-col sm:flex-row gap-5"
             >
-                <button
+                <a
+                    href="https://wa.me/584243311957?text=Hola,%20me%20gustaría%20agendar%20una%20cita%20con%20CompresorCool%20para%20un%20servicio%20técnico."
+                    target="_blank"
                     class="flex items-center justify-center rounded-full bg-accent px-10 py-5 text-xl font-black text-white shadow-[0_20px_50px_rgba(255,77,77,0.3)] hover:scale-105 transition-all cursor-pointer active:scale-95"
                 >
                     Reserva tu cita
-                </button>
+                </a>
             </div>
         </div>
     </div>
@@ -66,28 +68,27 @@
     import { animate, spring } from "motion";
 
     // Animate Text
-    animate(
-        "#hero-title",
-        { opacity: [0, 1], y: [50, 0] },
-        { duration: 0.8, easing: "ease-out" },
-    );
+    animate("#hero-title", { opacity: [0, 1], y: [50, 0] } as any, {
+        duration: 0.8,
+        ease: "easeOut",
+    });
 
-    animate(
-        "#hero-desc",
-        { opacity: [0, 1], y: [30, 0] },
-        { duration: 0.8, delay: 0.2, easing: "ease-out" },
-    );
+    animate("#hero-desc", { opacity: [0, 1], y: [30, 0] } as any, {
+        duration: 0.8,
+        delay: 0.2,
+        ease: "easeOut",
+    });
 
-    animate(
-        "#hero-cta",
-        { opacity: [0, 1], scale: [0.8, 1] },
-        { duration: 0.8, delay: 0.4, easing: spring() },
-    );
+    animate("#hero-cta", { opacity: [0, 1], scale: [0.8, 1] } as any, {
+        duration: 0.8,
+        delay: 0.4,
+        ease: "easeOut",
+    });
 
     // Animate Image
     animate(
         "#hero-image",
-        { opacity: [0, 1], x: [100, 0], scale: [0.9, 1.1] },
-        { duration: 1, delay: 0.5, easing: "ease-out" },
+        { opacity: [0, 1], x: [100, 0], scale: [0.9, 1.1] } as any,
+        { duration: 1, delay: 0.5, ease: "easeOut" },
     );
 </script>

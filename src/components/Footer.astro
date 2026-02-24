@@ -24,22 +24,7 @@
                     Líderes en servicio técnico especializado para hogares y
                     comercios. Tu confort es nuestra prioridad.
                 </p>
-                <div class="flex gap-4">
-                    <a
-                        class="size-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-accent transition-colors"
-                        href="#"
-                    >
-                        <span class="material-symbols-outlined">share</span>
-                    </a>
-                    <a
-                        class="size-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-accent transition-colors"
-                        href="#"
-                    >
-                        <span class="material-symbols-outlined"
-                            >alternate_email</span
-                        >
-                    </a>
-                </div>
+                <div class="flex gap-4"></div>
             </div>
             <div class="footer-col">
                 <h4 class="text-lg font-bold mb-6">Contacto</h4>
@@ -54,7 +39,7 @@
                         <span class="material-symbols-outlined text-accent"
                             >chat</span
                         >
-                        <span>WhatsApp: +1 987 654 321</span>
+                        <span>WhatsApp: +58 424-3311957</span>
                     </li>
                     <li class="flex items-start gap-3">
                         <span class="material-symbols-outlined text-accent"
@@ -68,23 +53,27 @@
                 <h4 class="text-lg font-bold mb-6">Servicios</h4>
                 <ul class="space-y-4 text-slate-400">
                     <li>
-                        <a class="hover:text-white transition-colors" href="#"
-                            >Aires Split</a
+                        <a
+                            class="hover:text-white transition-colors"
+                            href="#servicios">Aires Split</a
                         >
                     </li>
                     <li>
-                        <a class="hover:text-white transition-colors" href="#"
-                            >Aires Ventana</a
+                        <a
+                            class="hover:text-white transition-colors"
+                            href="#servicios">Aires Ventana</a
                         >
                     </li>
                     <li>
-                        <a class="hover:text-white transition-colors" href="#"
-                            >Neveras y Freezers</a
+                        <a
+                            class="hover:text-white transition-colors"
+                            href="#servicios">Neveras y Freezers</a
                         >
                     </li>
                     <li>
-                        <a class="hover:text-white transition-colors" href="#"
-                            >Cavas Cuarto</a
+                        <a
+                            class="hover:text-white transition-colors"
+                            href="#servicios">Cavas Cuarto</a
                         >
                     </li>
                 </ul>
@@ -103,22 +92,22 @@
     import { inView, animate, stagger } from "motion";
 
     inView("#main-footer", () => {
-        animate(
-            "#main-footer",
-            { opacity: [0, 1], y: [20, 0] },
-            { duration: 0.8, easing: "ease-out" },
-        );
+        animate("#main-footer", { opacity: [0, 1], y: [20, 0] } as any, {
+            duration: 0.8,
+            ease: "easeOut",
+        });
 
-        animate(
-            ".footer-col",
-            { opacity: [0, 1], y: [20, 0] },
-            { delay: stagger(0.1), duration: 0.6, easing: "ease-out" },
-        );
+        animate(".footer-col", { opacity: [0, 1], y: [20, 0] } as any, {
+            delay: stagger(0.1),
+            duration: 0.6,
+            ease: "easeOut",
+        });
     });
 </script>
 <a
     class="fixed bottom-8 right-8 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-white shadow-2xl hover:scale-110 transition-transform animate-pulse-slow"
-    href="#"
+    href="https://wa.me/584243311957?text=Hola,%20me%20gustaría%20agendar%20una%20cita%20con%20CompresorCool%20para%20un%20servicio%20técnico."
+    target="_blank"
 >
     <svg class="h-10 w-10 fill-current" viewBox="0 0 24 24">
         <path

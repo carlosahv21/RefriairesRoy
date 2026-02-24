@@ -30,21 +30,23 @@
             >
         </nav>
         <div class="flex items-center gap-4">
-            <button
-                class="flex items-center gap-2 rounded-full px-6 py-2.5 text-sm font-black text-white shadow-lg hover:scale-105 transition-all bg-accent cursor-pointer"
+            <a
+                href="https://wa.me/584243311957?text=Hola,%20me%20gustaría%20agendar%20una%20cita%20con%20CompresorCool%20para%20un%20servicio%20técnico."
+                target="_blank"
+                class="flex items-center gap-2 rounded-full px-4 md:px-6 py-2.5 text-sm font-black text-white shadow-lg hover:scale-105 transition-all bg-accent cursor-pointer"
             >
                 <span class="material-symbols-outlined text-lg"
                     >calendar_today</span
                 >
-                <span>Agendar Ahora</span>
-            </button>
+                <span class="hidden md:inline">Agendar Ahora</span>
+            </a>
         </div>
     </div>
 </header>
 
 <script>
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
+        anchor.addEventListener("click", function (this: HTMLAnchorElement, e) {
             e.preventDefault();
             const targetId = this.getAttribute("href");
             if (!targetId || targetId === "#") return;
