@@ -25,16 +25,19 @@
                         icon: "ac_unit",
                         title: "Instalación Profesional",
                         desc: "Equipos Split y Ventana instalados con los más altos estándares.",
+                        msg: "Hola, me interesa saber más sobre la Instalación Profesional.",
                     },
                     {
                         icon: "security",
                         title: "Garantía Extendida",
                         desc: "Respaldo total en cada reparación y mantenimiento realizado.",
+                        msg: "Hola, me interesa saber más sobre la Garantía Extendida.",
                     },
                     {
                         icon: "build",
                         title: "Servicio Técnico",
                         desc: "Atención especializada para neveras, cavas y sistemas centrales.",
+                        msg: "Hola, me interesa saber más sobre el Servicio Técnico.",
                     },
                 ].map((benefit) => (
                     <div class="benefit-card opacity-0 bg-white p-10 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-slate-100 flex flex-col items-center text-center group hover:translate-y-[-10px] transition-all duration-500">
@@ -49,9 +52,13 @@
                         <p class="text-slate-500 leading-relaxed font-medium">
                             {benefit.desc}
                         </p>
-                        <button class="mt-8 text-accent font-black uppercase text-sm tracking-wider hover:underline">
+                        <a
+                            href={`https://wa.me/584243311957?text=${encodeURIComponent(benefit.msg)}`}
+                            target="_blank"
+                            class="mt-8 text-accent font-black uppercase text-sm tracking-wider hover:underline cursor-pointer"
+                        >
                             Saber más
-                        </button>
+                        </a>
                     </div>
                 ))
             }
