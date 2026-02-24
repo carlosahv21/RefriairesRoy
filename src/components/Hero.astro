@@ -1,0 +1,93 @@
+---
+
+---
+
+<section
+    class="relative min-h-[90vh] flex items-center pt-32 pb-20 overflow-hidden"
+>
+    <!-- Vibrant Background Layer -->
+    <div class="absolute inset-0 bg-primary">
+        <div
+            class="absolute inset-0 bg-gradient-to-br from-primary via-primary to-accent opacity-90"
+        >
+        </div>
+    </div>
+
+    <!-- Pattern Overlay -->
+    <div
+        class="absolute inset-0 opacity-[0.05] pointer-events-none"
+        style="background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');"
+    >
+    </div>
+
+    <div class="relative mx-auto max-w-7xl px-6 lg:px-8 w-full">
+        <div class="max-w-3xl">
+            <h1
+                id="hero-title"
+                class="opacity-0 text-5xl font-black tracking-tight text-white sm:text-8xl mb-8 uppercase leading-[0.9]"
+            >
+                Confort Total <br />
+                <span class="text-white/90">Todo el Año</span>
+            </h1>
+            <p
+                id="hero-desc"
+                class="opacity-0 text-xl leading-relaxed text-white/80 mb-10 max-w-xl font-medium"
+            >
+                Expertos en mantenimiento y reparación de aire acondicionado y
+                refrigeración. Brindamos soluciones inmediatas para tu hogar o
+                negocio.
+            </p>
+            <div
+                id="hero-cta"
+                class="opacity-0 flex flex-col sm:flex-row gap-5"
+            >
+                <button
+                    class="flex items-center justify-center rounded-full bg-accent px-10 py-5 text-xl font-black text-white shadow-[0_20px_50px_rgba(255,77,77,0.3)] hover:scale-105 transition-all cursor-pointer active:scale-95"
+                >
+                    Reserva tu cita
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div
+        class="absolute bottom-0 right-[-5%] w-1/2 h-[80%] hidden lg:block opacity-100 pointer-events-none"
+    >
+        <img
+            id="hero-image"
+            alt="Equipos de aire acondicionado"
+            class="w-full h-full object-contain object-bottom scale-110"
+            src="/images/aires_acondicionados.png"
+        />
+    </div>
+</section>
+
+<script>
+    import { animate, spring } from "motion";
+
+    // Animate Text
+    animate(
+        "#hero-title",
+        { opacity: [0, 1], y: [50, 0] },
+        { duration: 0.8, easing: "ease-out" },
+    );
+
+    animate(
+        "#hero-desc",
+        { opacity: [0, 1], y: [30, 0] },
+        { duration: 0.8, delay: 0.2, easing: "ease-out" },
+    );
+
+    animate(
+        "#hero-cta",
+        { opacity: [0, 1], scale: [0.8, 1] },
+        { duration: 0.8, delay: 0.4, easing: spring() },
+    );
+
+    // Animate Image
+    animate(
+        "#hero-image",
+        { opacity: [0, 1], x: [100, 0], scale: [0.9, 1.1] },
+        { duration: 1, delay: 0.5, easing: "ease-out" },
+    );
+</script>

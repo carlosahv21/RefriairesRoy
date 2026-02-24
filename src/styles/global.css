@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+    --color-primary: #0a1e3b;
+    --color-accent: #ff4d4d;
+    --color-cyan-custom: #22d3ee;
+    --color-brand-orange: #f39200;
+
+
+    --font-display: "Plus Jakarta Sans", sans-serif;
+
+    --radius-default: 0.25rem;
+    --radius-lg: 0.5rem;
+    --radius-xl: 0.75rem;
+    --radius-full: 9999px;
+
+    @keyframes pulse-slow {
+        0%,
+        100% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0.5;
+        }
+    }
+
+    @keyframes float {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    @keyframes blur-in {
+        0% {
+            filter: blur(10px);
+            opacity: 0;
+        }
+        100% {
+            filter: blur(0);
+            opacity: 1;
+        }
+    }
+
+    --animate-pulse-slow: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    --animate-float: float 3s ease-in-out infinite;
+    --animate-blur-in: blur-in 1s ease-out forwards;
+}
+
+@layer base {
+    body {
+        @apply bg-[#0a1e3b] font-display text-slate-100 relative min-h-screen;
+        background-image: radial-gradient(
+            circle at center,
+            #0a1e3b 0%,
+            #102a4d 50%,
+            #05142b 100%
+        );
+    }
+}

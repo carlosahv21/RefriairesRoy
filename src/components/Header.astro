@@ -1,0 +1,60 @@
+---
+
+---
+
+<header class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-5xl">
+    <div
+        class="bg-white/90 backdrop-blur-xl border border-white/20 shadow-2xl rounded-2xl px-6 py-3 flex items-center justify-between"
+    >
+        <div class="flex items-center gap-2 text-primary">
+            <span
+                class="material-symbols-outlined text-3xl font-bold text-accent"
+                >ac_unit</span
+            >
+            <h1 class="text-xl font-black tracking-tight uppercase">
+                COMPRESOR<span class="text-accent">COOL</span>
+            </h1>
+        </div>
+        <nav class="hidden md:flex items-center gap-8">
+            <a
+                class="text-sm font-bold text-slate-600 hover:text-accent transition-colors"
+                href="#servicios">Servicios</a
+            >
+            <a
+                class="text-sm font-bold text-slate-600 hover:text-accent transition-colors"
+                href="#beneficios">Beneficios</a
+            >
+            <a
+                class="text-sm font-bold text-slate-600 hover:text-accent transition-colors"
+                href="#faq">FAQ</a
+            >
+        </nav>
+        <div class="flex items-center gap-4">
+            <button
+                class="flex items-center gap-2 rounded-full px-6 py-2.5 text-sm font-black text-white shadow-lg hover:scale-105 transition-all bg-accent cursor-pointer"
+            >
+                <span class="material-symbols-outlined text-lg"
+                    >calendar_today</span
+                >
+                <span>Agendar Ahora</span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href");
+            if (!targetId || targetId === "#") return;
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: "smooth",
+                });
+            }
+        });
+    });
+</script>

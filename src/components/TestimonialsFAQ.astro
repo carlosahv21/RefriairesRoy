@@ -1,0 +1,99 @@
+---
+
+---
+
+<section class="py-24 px-6 mx-auto max-w-7xl" id="faq-section">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+        <div id="testimonials-part">
+            <h2 class="text-3xl font-bold text-primary dark:text-white mb-12">
+                Lo que dicen nuestros clientes
+            </h2>
+            <div class="space-y-6">
+                {
+                    [
+                        {
+                            name: "Carlos Mendoza",
+                            text: "Excelente servicio. Mi aire no enfriaba nada y en una hora lo dejaron como nuevo. Muy honestos con el precio.",
+                            active: true,
+                        },
+                        {
+                            name: "Martha Ruiz",
+                            text: "La revisión de $5 fue muy completa. Me explicaron todo y el técnico fue muy respetuoso. Recomendados.",
+                            active: false,
+                        },
+                    ].map((t) => (
+                        <div
+                            class={`testimonial-card opacity-0 bg-background-light dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 ${!t.active ? "opacity-60" : ""}`}
+                        >
+                            <div class="flex items-center gap-1 mb-4 text-brand-orange">
+                                {[1, 2, 3, 4, 5].map(() => (
+                                    <span class="material-symbols-outlined fill-1">
+                                        star
+                                    </span>
+                                ))}
+                            </div>
+                            <p class="text-slate-700 dark:text-slate-300 italic mb-4 text-lg">
+                                "{t.text}"
+                            </p>
+                            <p class="font-bold text-primary dark:text-white">
+                                — {t.name}
+                            </p>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+        <div id="faq-part">
+            <h2 class="text-3xl font-bold text-primary dark:text-white mb-12">
+                Preguntas Frecuentes
+            </h2>
+            <div class="divide-y divide-slate-200 dark:divide-slate-800">
+                {
+                    [
+                        {
+                            q: "¿Qué incluye la revisión de $5?",
+                            a: "Incluye diagnóstico completo, detección de fugas, medición de presiones, chequeo de fallas eléctricas y un presupuesto detallado de la reparación.",
+                        },
+                        {
+                            q: "¿Atienden emergencias los fines de semana?",
+                            a: "Sí, contamos con un equipo de guardia para atender fallas críticas de refrigeración los sábados y domingos.",
+                        },
+                        {
+                            q: "¿Give garantía por escrito?",
+                            a: "Absolutamente. Todos nuestros trabajos y repuestos cuentan con una garantía certificada por escrito para tu tranquilidad.",
+                        },
+                    ].map((faq) => (
+                        <div class="faq-item opacity-0 py-6">
+                            <h3 class="text-lg font-bold text-primary dark:text-white mb-2">
+                                {faq.q}
+                            </h3>
+                            <p class="text-slate-600 dark:text-slate-400">
+                                {faq.a}
+                            </p>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    import { inView, animate, stagger } from "motion";
+
+    inView("#faq-section", () => {
+        // @ts-ignore
+        animate(
+            ".testimonial-card",
+            { opacity: [0, 1], x: [-50, 0] },
+            { delay: stagger(0.2), duration: 0.8, easing: "ease-out" },
+        );
+
+        // @ts-ignore
+        animate(
+            ".faq-item",
+            { opacity: [0, 1], y: [20, 0] },
+            { delay: stagger(0.1), duration: 0.6, easing: "ease-out" },
+        );
+    });
+</script>
