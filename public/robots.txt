@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://compresorcool.com/sitemap.xml
+Sitemap: https://refriaires-roy.vercel.app/sitemap.xml

@@ -9,19 +9,19 @@ interface Props {
 }
 
 const {
-    title = "CompresorCool - Expertos en Refrigeración y AC",
+    title = "refriaires-roy - Expertos en Refrigeración y AC",
     description = "Servicio técnico especializado en mantenimiento y reparación de aire acondicionado, cavas cuarto, neveras y refrigeración comercial para hogares y comercios. Tu confort es nuestra prioridad.",
     image = "/images/aires_acondicionados.png",
     canonicalURL = new URL(
         Astro.url.pathname,
-        Astro.site || "https://compresorcool.com",
+        Astro.site || "https://refriaires-roy.vercel.app",
     ),
 } = Astro.props;
 
 const schema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: "CompresorCool",
+    name: "refriaires-roy",
     image: new URL(image, canonicalURL).toString(),
     description: description,
     url: canonicalURL.toString(),
